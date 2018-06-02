@@ -1,0 +1,96 @@
+Quais sao os operadores logicos Ruby
+
+Para exemplificar estes topicos... vamos atribuir um valor para a variavel
+a = 3
+b = 5
+c = rodrigo
+
+==  comparacao     (lembrando que = eh atribuicao !!! hehe)
+
+ a == 2  
+  - >false      (pois a eh igual a 3)
+
+
+  a == 3
+  		-> true
+
+> 	maior que. e < menor que
+
+	a > 1
+		-> True
+
+	a > 2
+		-> True
+
+	a < 3
+		-> False   (Falso porque a eh exatamente 3 e nao menor)
+
+	a < 5
+		-> True
+
+>= Maior ou igual, <=Menor ou igual
+
+		Essa eh bem parecida a anterior, so que aqui quando o numero for igual
+		ele retorna como positivo.
+		
+		a <= 3
+		-> True
+
+		a >= 3
+		-> True
+
+<=>	Eh um modo de comparar que eu achei bem peculiar, inclusive acredito que 
+	seja bem pouco utilizado. mas enfim, vamos la
+
+	Quando o numero comparado for maior, o console retorna 1
+	Quando o numero comparado for igual, o console retorna 0
+	Quando o numero comparado for menor, o console retorna -1
+
+	EX :   a eh o numero comparado
+
+	a <=> 2 -> 1
+	a <=> 3 -> 0
+	a <=> 5 -> -1
+
+
+!=   Quando eh diferente  aqui ele retorna se um boleano
+
+	a != 2 ->True
+	a != 3 ->False
+
+	Peculiaridade, se voce fizer isso.  !(a != 3) -> True
+
+	not e !  sao a mesma coisa.
+
+&& Serve para fazer duas comparacoes ao mesmo tempo. Neste operador, as duas condicoes devem ser iguais sempre. Caso contrario ele volta a informacao como falso. Lembrando que podemos utilizar aqui tambem a palavra "and"
+
+		a == 3 && b == 5  -> True
+		a == 3 && b == 4  -> False
+		a == 3 and b == 5  -> True
+		a == 3 and b == 4  -> False
+
+||  Eh igual ao anterior, porem este basta que uma das comparacoes esteja certa para que nos retorne "True"  podemos utilizar "or" tambem.
+
+		a == 3 || b == 5  -> True
+		a == 3 || b == 4  -> True
+		a == 3 or b == 5  -> True
+		a == 3 or b == 4  -> True
+		a == 2 or b == 1  -> False
+
+eql?   Essa função serve para comparar se dois itens são totalmente iguais.
+
+		a.eql?(3)  -> True
+		a.eql?(6)  -> False
+
+~=		Compara e pesquisa se determinado valor expresso em seu parâmetro se encontra no valor comparado.
+
+		c ~= /r/  -> True
+		c ~= /(r)|(i)/ -> True   (Aqui ele está pesquisando se tem r ou i)
+		c ~= /x/  -> false
+
+!~		Faz a mesma coisa que o anterior, só que ao contrário. Perceba nos exemplos. Ou seja, ele pesquisa se determinado valor não existe no valor comparado. Se o valor NÃO ESTIVER presente. ele retorna como True. 
+
+		c ~= /r/  -> False
+		c ~= /(r)|(i)/ -> False   
+		c ~= /x/  -> True
+
